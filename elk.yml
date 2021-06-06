@@ -1,0 +1,45 @@
+
+- name: Config Web VM with Docker
+  hosts: elk
+  become: true
+  tasks:
+
+  - name: user more memory
+    sysctl:
+      name: vm.max_map_count
+      value: '262144'
+      state: present
+      reload: yes
+
+  - name: install dockerio
+    apt:
+      name: docker.io
+      state: present
+      update_cache: yes
+
+  - name: Install pip3
+    apt:
+      force_apt_get: yes
+      name: python3-pip
+      state: present
+
+  - name: Install docker python mod
+    pip:
+      name: docker
+      state: present
+
+  - name: install elk
+    docker_container:
+      name: elk
+      state: started
+      restart_policy: always
+      image: sebp/elk:761
+      published_ports:
+        - 5601:5601
+        - 9200:9200
+        - 5044:5044
+
+  - name: enable docker on boot
+    systemd:
+      name: docker
+      enabled: yes
