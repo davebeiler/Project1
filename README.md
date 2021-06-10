@@ -1,7 +1,8 @@
 # Project1
 Project1
+
 NSG: network secure gateway or Firewall
 
-web1/web2: vm hosted web server w/Docker DVWA
+web1/web2/web3: VM's hosted web server w/Docker DVWA, offering fault tolerance
 
-elk: elk stack server to gather Logs
+Elk: elk stack server to gather Logs on the three servers
