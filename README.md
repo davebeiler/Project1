@@ -47,16 +47,17 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
+- 99.22.252.20X (home IP Address)
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by Jumpbox.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
+| Jump Box | No                  | my home IP.          |
+| Elk      | No                  |                      |
 |          |                     |                      |
 
 ### Elk Configuration
@@ -65,9 +66,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _TODO: What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Adds more memory
+- Installs Dockerio
+- installs pip3
+- install docker python via pip
+- installs elk stack and configures Ports
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -75,7 +78,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+-  Monitoring 10.1.0.7/10.1.0.8 and 10.2.0.7 web servers
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
