@@ -24,7 +24,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- What aspect of security do load balancers protect? What is the advantage of a jump box? Allows only my computer access to my Azure network
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_
@@ -33,13 +33,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| web1     |          |            | Linux            |
-| web2     |          |            | Linux            |
-| web3     |          |            | Linux            |
-| elk      |          |            | Linux            |
+| Name     | Function              | IP Address | Operating System |
+|----------|-----------------------|------------|------------------|
+| Jump Box | Gateway               | 10.0.0.1   | Linux            |
+| web1     | External Web server 1 | 10.1.0.7   | Linux            |
+| web2     | External Web server 2 | 10.1.0.8   | Linux            |
+| web3     | External Web server 3 | 10.2.0.1   | Linux            |
+| elk      | Provides              | 10.4.0.4   | Linux            |
 
 ### Access Policies
 
