@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  Enter the playbook file.while inside the docker container ansible: root# Ansible-playbook pentest.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -46,8 +46,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
-- 99.22.252.20X (home IP Address)
+- Add whitelisted IP addresses:
+  99.22.252.20X (home IP Address)
 
 Machines within the network can only be accessed by Jumpbox.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -85,7 +85,7 @@ We have installed the following Beats on these machines:
 - webserver 1, 2, and 3
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: log files for web server 1, 2, and 3
+- log files for web server 1, 2, and 3
 - provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
