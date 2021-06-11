@@ -45,12 +45,12 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - Add whitelisted IP addresses:
-  99.22.252.20X (home IP Address)
+  99.22.252.XX (home IP Address)
 
 Machines within the network can only be accessed by Jumpbox.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- Which machine did you allow to access your ELK VM? What was its IP address? 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -63,8 +63,8 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible?_
-- Allows you to edit many machines with just 1 file, not having to repeat yourself
+- What is the main advantage of automating configuration with Ansible?
+  Allows you to edit many machines with just 1 file, not having to repeat yourself
 
 The playbook implements the following tasks:
 - Adds more memory
@@ -96,7 +96,7 @@ SSH into the control node and follow the steps below:
 - Update the host files file to include your web servers for the [webserver] group and the [elk servers] group
 - Run the playbook, and navigate to elk server to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+Answer the following questions to fill in the blanks:_
 - Which file is the playbook? filebeat-playbook.yml gets copied to the ansible directory, /etc/ansible
 - Which file do you update to make Ansible run the playbook on a specific machine? hosts file
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?
