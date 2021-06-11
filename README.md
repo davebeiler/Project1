@@ -57,13 +57,14 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | No                  | my home IP.          |
-| Elk      | No                  |                      |
-|          |                     |                      |
+| Elk      | No                  | my home IP.          |
+| web1, web2, web3 | yes         | my home IP.          |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- What is the main advantage of automating configuration with Ansible?_
+- Allows you to edit many machines with just 1 file, not having to repeat yourself
 
 The playbook implements the following tasks:
 - Adds more memory
@@ -81,10 +82,11 @@ This ELK server is configured to monitor the following machines:
 -  Monitoring 10.1.0.7/10.1.0.8 and 10.2.0.7 web servers
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- webserver 1, 2, and 3
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _TODO: log files for web server 1, 2, and 3
+- provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
