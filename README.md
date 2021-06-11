@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](https://github.com/davebeiler/Project1/blob/main/Screen%20Shot%202021-06-10%20at%208.38.13%20PM.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the select file may be used to install only certain pieces of it, such as Filebeat.
 
   Enter the playbook file.while inside the docker container ansible: root# Ansible-playbook pentest.yml
 
@@ -26,9 +26,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting load balancing to the network.
 - What aspect of security do load balancers protect? What is the advantage of a jump box? Allows only my computer access to my Azure network
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system monitor.
+- What does Filebeat watch for? monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing
+- What does Metricbeat record? takes the metrics and statistics that it collects and ships them to the output that you specify
 
 The configuration details of each machine may be found below.
 
